@@ -1,0 +1,34 @@
+<div class="trade">
+  <div class="left">
+    <span>{{ item.left.amount }}x</span>
+    <img
+      src="./../../{{ item.left.image }}"
+      alt="{{ item.left.name }}"
+      data-tooltip="{ 'offset': 10, 'class': 'alt-tooltip' }"
+      title="{{ item.left.name }}"
+    />
+  </div>
+
+  <img
+    *ngIf="!orSymbol"
+    src="./../../assets/img/arrow.png"
+    alt="→"
+    class="arrow"
+  />
+  <img
+    *ngIf="orSymbol"
+    src="./../../assets/img/or.png"
+    alt="/"
+    class="or"
+  />
+
+  <div class="right" *ngIf="item.right">
+    <span>{{ item.right.amount }}x</span>
+    <img
+      src="./../../{{ item.right.image }}"
+      alt="{{ item.right.name }}"
+      data-tooltip="{ 'offset': 10, 'class': 'alt-tooltip' }"
+      title="{{ item.right.name }}"
+    />
+  </div>
+</div>

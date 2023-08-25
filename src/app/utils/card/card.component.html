@@ -1,0 +1,17 @@
+<div [class.center]="center">
+  <div [class.img-card]="src != ''">
+    <div *ngIf="src != ''" id="img">
+      <span></span>
+      <img [src]="src" [alt]="alt" />
+    </div>
+
+    <div
+      id="card"
+      [class.light]="light"
+      [class.warn]="warn"
+      [style.width]="maxWidth"
+    >
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

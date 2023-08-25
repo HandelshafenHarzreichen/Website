@@ -1,0 +1,27 @@
+<card [light]="!orSymbol" maxWidth="1000px" [center]="true">
+  <ng-content select=".header"></ng-content>
+
+  <div class="grid">
+    <ng-template *ngIf="!orSymbol; then arrow; else or"></ng-template>
+
+    <ng-template #arrow>
+      <card *ngFor="let item of items" [center]="true">
+        <inner-trade-grid
+          [item]="item"
+          [orSymbol]="orSymbol"
+        ></inner-trade-grid>
+      </card>
+    </ng-template>
+
+    <ng-template #or>
+      <div *ngFor="let item of items">
+        <inner-trade-grid
+          [item]="item"
+          [orSymbol]="orSymbol"
+        ></inner-trade-grid>
+      </div>
+    </ng-template>
+  </div>
+
+  <ng-content select=".footer"></ng-content>
+</card>

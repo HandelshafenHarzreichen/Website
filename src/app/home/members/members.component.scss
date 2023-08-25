@@ -1,0 +1,21 @@
+#members {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  #grid {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    vertical-align: middle;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    img {
+      vertical-align: top;
+    }
+  }
+}
+
+p {
+  margin: 0;
+}

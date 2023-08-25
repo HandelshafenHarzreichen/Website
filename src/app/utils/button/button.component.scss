@@ -1,0 +1,61 @@
+div {
+  width: 100%;
+  text-align: center;
+
+  button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border: 2px solid var(--primary-100);
+    border-radius: 10px;
+    background-color: var(--accent-100);
+    text-shadow: var(--text-shadow-A20);
+    transition: all 0.3s;
+
+    &.ring::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 6px solid var(--primary-100);
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+
+    &:hover,
+    &:focus {
+      border-radius: 13px;
+      background-color: var(--background-100);
+      border-color: var(--splash-100);
+      color: var(--splash-100);
+
+      &.ring::after {
+        animation: none;
+        display: none;
+      }
+    }
+
+    @keyframes ring {
+      0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+      }
+      100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+      }
+    }
+  }
+}

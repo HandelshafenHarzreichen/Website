@@ -1,0 +1,7 @@
+<div>
+  <app-header *ngIf="router.url !== '/ordendesstuhls'"></app-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer *ngIf="router.url !== '/ordendesstuhls'"></app-footer>
+</div>

@@ -1,0 +1,30 @@
+footer {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 20px;
+
+  text-align: center;
+  background-color: var(--background-400);
+
+  span:first-child {
+    display: inline-flex;
+
+    img {
+      height: 1em;
+      margin-top: 2px;
+      margin-left: 0.3em;
+      margin-right: 0.3em;
+    }
+  }
+
+  span:last-child {
+    margin-top: 15px;
+    display: block;
+    user-select: none;
+
+    a {
+      user-select: text;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.trade {
+  display: inline-flex;
+
+  div {
+    display: inline-flex;
+    span {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      font-size: larger;
+      color: var(--accent-100);
+    }
+    img {
+      height: 70px;
+    }
+  }
+
+  .arrow,
+  .or {
+    margin-left: 20px;
+    margin-right: 20px;
+    image-rendering: crisp-edges;
+    object-fit: contain;
+  }
+
+  .arrow {
+    width: 70px;
+  }
+
+  .or {
+    height: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  .trade {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 300px) {
+  .trade {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 200px) {
+  .trade {
+    transform: scale(0.3);
+  }
+}
+
+@media (max-width: 100px) {
+  .trade {
+    transform: scale(0.15);
+  }
+}

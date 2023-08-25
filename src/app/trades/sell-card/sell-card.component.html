@@ -1,0 +1,29 @@
+<trade-grid [items]="sellList">
+  <card class="header">
+    <h2>Verkauf</h2>
+    <p>
+      Hier findest du eine Preisliste zu unserem aktuellen Angebot an Sachen die
+      wir Verkaufen.
+    </p>
+    <p>
+      Preisalternativen zum Netherrite findest du
+      <a (click)="curranciesHidden = !curranciesHidden">hier</a>.
+    </p>
+
+    <trade-grid
+      [items]="sellCurrancies"
+      [orSymbol]="true"
+      *ngIf="!curranciesHidden"
+    >
+    </trade-grid>
+  </card>
+
+  <div class="footer">
+    <div class="space"></div>
+    <a (click)="itemsNotFound = !itemsNotFound">{{
+      itemsNotFound
+        ? "Alles gut! Wenn wir eine Ressource nicht haben, haben wir die Ressourcen um es zu farmen! Schreib uns doch einfach auf Discord an ;)"
+        : "Du findest deine gesuchte Ware nicht?"
+    }}</a>
+  </div>
+</trade-grid>

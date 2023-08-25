@@ -1,0 +1,116 @@
+header {
+  background: linear-gradient(to bottom, transparent, var(--background-300)),
+    url("./../../../assets/img/mainstreet.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  height: 350px;
+  margin-bottom: 20px;
+
+  div {
+    max-width: 100%;
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: var(--text-shadow-A20);
+
+    p {
+      max-width: 100%;
+      margin-top: 0;
+
+      &:last-of-type {
+        letter-spacing: -1px;
+        font-size: 55px;
+        white-space: nowrap;
+        background: linear-gradient(
+          120deg,
+          var(--primary-100),
+          var(--secondary-100)
+        );
+        background-clip: text;
+        color: transparent;
+        text-shadow: none;
+        filter: drop-shadow(var(--text-shadow-A20));
+      }
+    }
+
+    span {
+      position: absolute;
+      right: 0;
+      bottom: -1em;
+      transform: translateX(50%) rotate(-10deg);
+      max-width: 100%;
+
+      white-space: nowrap;
+      font-weight: normal;
+      color: var(--splash-100);
+      font-size: 25px;
+      text-shadow: var(--splash-shadow-A20);
+
+      animation-name: splash;
+      animation-duration: 0.45s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+
+      @keyframes splash {
+        from {
+          transform: translateX(50%) rotate(-10deg) scale(1, 1);
+        }
+        to {
+          transform: translateX(50%) rotate(-10deg) scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header div span {
+    left: 50%;
+    right: unset;
+    bottom: -1.5em;
+    transform: translateX(-50%) rotate(-3deg);
+    animation-name: lessSplash;
+
+    @keyframes lessSplash {
+      from {
+        transform: translateX(-50%) rotate(-3deg) scale(1, 1);
+      }
+      to {
+        transform: translateX(-50%) rotate(-3deg) scale(1.2, 1.2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header div {
+    width: min-content;
+
+    p:last-of-type {
+      white-space: normal;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header div {
+    p {
+      font-size: 7vw;
+      &:last-of-type {
+        font-size: 10vw;
+      }
+    }
+
+    span {
+      font-size: 7vw;
+    }
+  }
+}

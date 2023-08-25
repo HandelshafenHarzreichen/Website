@@ -1,0 +1,119 @@
+/* atractions */
+.atractions {
+  min-height: 450px;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: unsafe;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+
+  &:hover > .at:not(:hover) {
+    background: linear-gradient(
+        to bottom,
+        #271c17d5 0%,
+        #271c17d5 90%,
+        #0c0a0a 100%
+      ),
+      url("../../assets/img/background.png");
+  }
+
+  .at {
+    display: inline-flex;
+    color: var(--text-200);
+    width: 600px;
+    padding: 20px 25px;
+    background: linear-gradient(0, #271c17d5, #271c17d5),
+      url("../../assets/img/background.png");
+    border: 2px solid var(--accent-100);
+
+    border-radius: 25px;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    max-height: 400px;
+
+    &:hover {
+      width: 1200px;
+    }
+
+    &:hover > .left {
+      width: 50%;
+    }
+
+    &:hover > .right {
+      margin-right: 20px;
+      display: block;
+      width: 50%;
+    }
+  }
+
+  .left h2 {
+    padding-bottom: 15px;
+  }
+
+  .right {
+    transform: translateY(-25px);
+    position: relative;
+    display: none;
+    width: 0;
+  }
+
+  img {
+    height: calc(100% + 50px);
+    max-height: 400px;
+  }
+}
+
+.path {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+      to bottom,
+      var(--background-300),
+      transparent,
+      var(--background-300)
+    ),
+    url("../../assets/img/path.png"),
+    linear-gradient(
+      0,
+      var(--background-300),
+      var(--accent-100),
+      var(--background-300)
+    );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.space {
+  height: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .atractions {
+    flex-wrap: wrap;
+
+    .at {
+      width: 200%;
+
+      .left {
+        width: 50%;
+      }
+
+      .right {
+        margin-right: 20px;
+        display: block;
+        width: 50%;
+      }
+    }
+
+    &:hover > .at:not(:hover) {
+      background: linear-gradient(0, #271c17d5, #271c17d5),
+        url("../../assets/img/background.png");
+    }
+  }
+}

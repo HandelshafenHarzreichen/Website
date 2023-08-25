@@ -1,0 +1,94 @@
+<card
+  src="./../../assets/img/banner.png"
+  alt="Stadt Banner"
+  maxWidth="1000px"
+  [center]="true"
+  id="about"
+>
+  <h2>Über uns</h2>
+  <p>
+    Wer ist der Handelshafen Harzreichen? Wir sind eine Gruppe von bemühten
+    Farmern, Bauern und anderen fleißigen Spielern und fokussieren uns auf den
+    Handel und Tourismus. Unsere Gemeinschaft ist der größte Händler und bietet
+    Waren von A bis Z an. Doch es gibt noch viel mehr zu erkunden. Durchforste
+    gerne unsere Website oder schau doch direkt bei uns vorbei!
+  </p>
+</card>
+
+<div class="atractions">
+  <div class="at at1">
+    <div class="left">
+      <h2>Casino</h2>
+      <p>
+        Hast du Lust mit etwas Glück deinen Reichtum zu verdoppeln? Dann bist du
+        hier genau richtig! Triff andere Spieler, schaue dir die Unterwasserwelt
+        des Aquariums an und noch viel mehr! Besuche das Harzreichener Casino
+        und versuche dein Glück!
+      </p>
+      <span style="padding-top: 15px; color: red; text-shadow: 2px 2px #240202"
+        >Im Aufbau</span
+      >
+    </div>
+    <div class="right"><img src="./../../assets/img/casino.png" /></div>
+  </div>
+
+  <div class="at at2">
+    <div class="left">
+      <h2>Handel</h2>
+      <p>
+        Elytren, Shulkerchests, Essen, Bauressourcen, Armortrims, Wertsachen und
+        mehr! Entdecke unser
+        <a routerLink="/trades">Sortiment</a> oder kontaktiere uns direkt per
+        msg!
+      </p>
+    </div>
+    <div class="right"><img src="./../../assets/img/trading.png" /></div>
+  </div>
+
+  <div class="at at3">
+    <div class="left">
+      <h2>Und noch viel mehr...</h2>
+      <p>
+        Für die Zukunft ist noch viel geplant. Projekte wie eine Kampfarena,
+        automatisierte Shops und unglaublich viel Spaß wird uns noch erwarten!
+      </p>
+    </div>
+    <div class="right"><img src="./../../assets/img/nachosbienen.png" /></div>
+  </div>
+</div>
+
+<app-button routerLink="/trades" [ring]="true">Unser Angebot</app-button>
+
+<div class="path"></div>
+
+<card
+  src="./../../assets/img/items/map.png"
+  alt="Map Item"
+  maxWidth="1000px"
+  [center]="true"
+>
+  <h2>Position: -6100 100</h2>
+  <p id="position">
+    Einfach vom Spawn aus richtung Westen oder direkt per Heißluftballon vom
+    Spawn aus zu uns Teleportieren.
+  </p>
+</card>
+
+<div class="space"></div>
+
+<card
+  src="./../../assets/img/discord.png"
+  alt="Discord Logo"
+  maxWidth="1000px"
+  [center]="true"
+>
+  <h2>Discord</h2>
+  <p id="discord">
+    Hier findest du unseren Discord:
+    <a href="https://discord.gg/pNpxW4yVjZ" target="_blank" class="link"
+      >discord.gg/pNpxW4yVjZ</a
+    >
+  </p>
+</card>
+
+<members></members>
