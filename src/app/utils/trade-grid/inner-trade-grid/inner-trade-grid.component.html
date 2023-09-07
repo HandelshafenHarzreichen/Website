@@ -2,6 +2,7 @@
   <div class="left">
     <span>{{ item.left.amount }}x</span>
     <img
+      tooltip="{{ item.left.name }}"
       src="./../../{{ item.left.image }}"
       alt="{{ item.left.name }}"
       data-tooltip="{ 'offset': 10, 'class': 'alt-tooltip' }"
@@ -15,16 +16,12 @@
     alt="→"
     class="arrow"
   />
-  <img
-    *ngIf="orSymbol"
-    src="./../../assets/img/or.png"
-    alt="/"
-    class="or"
-  />
+  <img *ngIf="orSymbol" src="./../../assets/img/or.png" alt="/" class="or" />
 
   <div class="right" *ngIf="item.right">
     <span>{{ item.right.amount }}x</span>
     <img
+      tooltip="{{ item.right.name }}"
       src="./../../{{ item.right.image }}"
       alt="{{ item.right.name }}"
       data-tooltip="{ 'offset': 10, 'class': 'alt-tooltip' }"

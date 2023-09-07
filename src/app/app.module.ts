@@ -16,6 +16,7 @@ import { BuyCardComponent } from './trades/buy-card/buy-card.component';
 import { TradeGridComponent } from './utils/trade-grid/trade-grid.component';
 import { InnerTradeGridComponent } from './utils/trade-grid/inner-trade-grid/inner-trade-grid.component';
 import { OrdenDesStuhlsComponent } from './orden-des-stuhls/orden-des-stuhls.component';
+import { TooltipModule } from 'ng2-tooltip-directive-major-angular-updates';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { OrdenDesStuhlsComponent } from './orden-des-stuhls/orden-des-stuhls.com
     InnerTradeGridComponent,
     OrdenDesStuhlsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, TooltipModule],
   providers: [],
   bootstrap: [AppComponent],
 })

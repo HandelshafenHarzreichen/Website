@@ -1,11 +1,7 @@
 <div id="members">
   <card [center]="true" maxWidth="1150px" [light]="true">
     <div id="grid">
-      <div
-        *ngFor="let member of members"
-        data-tooltip="{ 'offset': 10, 'class': 'alt-tooltip' }"
-        title="{{ member.name }}"
-      >
+      <div *ngFor="let member of members" tooltip="{{ member.name }}">
         <img
           src="http://cravatar.eu/helmhead/{{ member.name }}/64.png"
           alt="{{ member.name }}"
@@ -15,8 +11,12 @@
     <card>
       <p>
         Du hast Interesse am Handelshafen und willst uns beitreten? Dann füll
-        jetzt unser <a href="https://forms.gle/MPFJvVGsExiqiEpb6" target="_blank">Formular</a> aus. Sobald wir deine Bewerbung
-        gelesen haben werden wir uns bei dir melden.
+        jetzt unser
+        <a href="https://forms.gle/MPFJvVGsExiqiEpb6" target="_blank"
+          >Formular</a
+        >
+        aus. Sobald wir deine Bewerbung gelesen haben werden wir uns bei dir
+        melden.
       </p>
     </card>
   </card>
